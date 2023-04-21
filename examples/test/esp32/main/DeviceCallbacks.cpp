@@ -106,13 +106,3 @@ void emberAfOnOffClusterInitCallback(EndpointId endpoint)
     ESP_LOGI(TAG, "emberAfOnOffClusterInitCallback");
     GetAppTask().UpdateClusterState();
 }
-
-void AppDeviceCallbacksDelegate::OnIPv4ConnectivityEstablished()
-{
-    
-}
-
-void AppDeviceCallbacksDelegate::OnIPv4ConnectivityLost()
-{
-    
-}

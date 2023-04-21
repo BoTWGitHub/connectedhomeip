@@ -57,10 +57,6 @@ private:
     static void SwitchActionEventHandler(AppEvent * aEvent);
     static void LightingActionEventHandler(AppEvent * aEvent);
 
-#if CONFIG_DEVICE_TYPE_M5STACK
-    static void ButtonPressedAction(AppEvent * aEvent);
-#endif
-
     static AppTask sAppTask;
 };
 
