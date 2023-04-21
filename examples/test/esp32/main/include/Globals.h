@@ -17,7 +17,3 @@
  */
 
 #pragma once
-
-#include "WiFiWidget.h"
-
-extern WiFiWidget wifiLED;

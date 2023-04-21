@@ -109,10 +109,10 @@ void emberAfOnOffClusterInitCallback(EndpointId endpoint)
 
 void AppDeviceCallbacksDelegate::OnIPv4ConnectivityEstablished()
 {
-    wifiLED.Set(true);
+    
 }
 
 void AppDeviceCallbacksDelegate::OnIPv4ConnectivityLost()
 {
-    wifiLED.Set(false);
+    
 }

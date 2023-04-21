@@ -17,5 +17,3 @@
  */
 
 #include "Globals.h"
-
-WiFiWidget wifiLED;

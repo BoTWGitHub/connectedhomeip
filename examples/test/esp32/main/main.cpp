@@ -22,11 +22,7 @@
 #include <common/Esp32AppServer.h>
 
 #include "esp_log.h"
-#if ESP_IDF_VERSION >= ESP_IDF_VERSION_VAL(5, 0, 0)
-#include "spi_flash_mmap.h"
-#else
 #include "esp_spi_flash.h"
-#endif
 #include "esp_system.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -87,17 +83,6 @@ extern "C" void app_main()
     ESP_LOGI(TAG, "==================================================");
     ESP_LOGI(TAG, "chip-esp32-light-example starting");
     ESP_LOGI(TAG, "==================================================");
-
-#if CONFIG_ENABLE_CHIP_SHELL
-    chip::LaunchShell();
-#endif
-#if CHIP_DEVICE_CONFIG_ENABLE_WIFI
-    if (Internal::ESP32Utils::InitWiFiStack() != CHIP_NO_ERROR)
-    {
-        ESP_LOGE(TAG, "Failed to initialize WiFi stack");
-        return;
-    }
-#endif // CHIP_DEVICE_CONFIG_ENABLE_WIFI
 
     DeviceLayer::SetDeviceInfoProvider(&gExampleDeviceInfoProvider);
 
